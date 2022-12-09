@@ -137,6 +137,22 @@ $ hexo server
 
 ### 二、配置CloudFlare CDN
 
+因为我的域名是在腾讯云购买的，所以我需要通过的腾讯云默认的DNSPOD来修改原有DNS为CloudFlare的DNS。
+
+##### 在腾讯云管理中修改DNS服务器
+
+- brian.ns.cloudflare.com
+
+- paityn.ns.cloudflare.com
+
+##### 在CloudFlare配置CNAME
+
+- @ dongbox.github.io
+
+- www dongbox.github.io
+
+
+
 #### 参考文章
 
 - [基于 Hexo 的 GitHub Pages 配置 CloudFlare CDN_qhh0205的博客-CSDN博客](https://blog.csdn.net/qianghaohao/article/details/83714575)
