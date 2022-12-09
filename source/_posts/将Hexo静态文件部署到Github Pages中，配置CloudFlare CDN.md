@@ -20,7 +20,7 @@ cover: https://images.unsplash.com/photo-1670506552296-668e793daf7a
    git remote add origin https://github.com/Dongbox/dongbox.github.io.git
    ```
 
-3. 修改配置文件**_config.yml**中的远程仓库地址
+3. 修改配置文件`_config.yml`中的远程仓库地址
 
 ```yml
 deploy:
@@ -29,7 +29,13 @@ deploy:
   branch: main
 ```
 
+4. 发布到Hexo
+   
+   ```bash
+   hexo clean && hexo g && hexo d
+   ```
 
+5. 远程仓库
 
 首先在 Hexo 的仓库中创建一个新文件：`.github/workflows/deploy.yml`，文件名可以自己取，但是一定要放在 `.github/workflows` 目录中，文件的内容如下：
 
