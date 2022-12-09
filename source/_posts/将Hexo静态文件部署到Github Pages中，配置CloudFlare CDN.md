@@ -5,7 +5,7 @@ tags: Hexo
 cover: https://images.unsplash.com/photo-1670506552296-668e793daf7a
 ---
 
-### 新建github仓库
+### 新建github仓库并上传基本内容
 
 1. 创建一个名为`dongbox.github.io`
 
@@ -21,13 +21,13 @@ cover: https://images.unsplash.com/photo-1670506552296-668e793daf7a
    ```
 
 3. 修改配置文件`_config.yml`中的远程仓库地址
-
-```yml
-deploy:
-  type: git
-  repo: https://github.com/Dongbox/dongbox.github.io.git
-  branch: main
-```
+   
+   ```yml
+   deploy:
+     type: git
+     repo: https://github.com/Dongbox/dongbox.github.io.git
+     branch: main
+   ```
 
 4. 发布到Hexo
    
@@ -35,61 +35,22 @@ deploy:
    hexo clean && hexo g && hexo d
    ```
 
-5. 远程仓库
-
-首先在 Hexo 的仓库中创建一个新文件：`.github/workflows/deploy.yml`，文件名可以自己取，但是一定要放在 `.github/workflows` 目录中，文件的内容如下：
-
-```yml
-name: Hexo Deploy
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build:
-    runs-on: ubuntu-18.04
-    if: github.event.repository.owner.id == github.event.sender.id
-
-    steps:
-      - name: Checkout source
-        uses: actions/checkout@v2
-        with:
-          ref: master
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '18'
-
-      - name: Setup Hexo
-        env:
-          ACTION_DEPLOY_KEY: ${{ secrets.HEXO_DEPLOY_KEY }}
-        run: |
-          mkdir -p ~/.ssh/
-          echo "$ACTION_DEPLOY_KEY" > ~/.ssh/id_rsa
-          chmod 700 ~/.ssh
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan github.com >> ~/.ssh/known_hosts
-          git config --global user.email "sfreebobo@163.com"
-          git config --global user.name "dongbox"
-          npm install hexo-cli -g
-          npm install
-
-      - name: Deploy
-        run: |
-          hexo clean
-          hexo deploy
-```
-
-### Hexo部署
-
-```bash
-$ hexo d
-```
+5. 上传源码到远程仓库
+   
+   除了静态文件，我们还要上传Hexo源码文件。
+   
+   ```bash
+   # 创建一个新的分支hexo
+   git checkout -b hexo
+   # 添加文件到本地仓库
+   git add .
+   # 提交声明
+   git commit -m '内容'
+   # 推送源码到hexo分支
+   git push origin hexo
+   ```
 
 ### 参考
 
 - [使用hexo+github免费搭建个人博客网站超详细教程_wapchief的博客-CSDN博客_github hexo](https://blog.csdn.net/wapchief/article/details/54602515)
-- https://zhuanlan.zhihu.com/p/170563000
+- 
