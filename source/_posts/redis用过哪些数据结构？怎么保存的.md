@@ -1,7 +1,8 @@
 ---
 title: redis用过哪些数据结构？怎么保存的?
 date: 2022-12-09 20:15:37
-tags: 
+tags: Database
+categories: Python面试题
 cover: https://images.unsplash.com/photo-1666126444655-23492b1532e2
 ---
 
@@ -77,15 +78,17 @@ encoding中的存储类型所表示的含义如下图所示：
 
 String类型的数据结构存储方式有三种int、raw、embstr。
 
-Redis中规定假如存储的是 **[整数型值]**，比如set num 123这样的类型，就会使用 int的存储方式进行存储，在redisObject的**[ptr属性]**中就会保存该值。
+Redis中规定假如存储的是 **[整数型值]**，比如set num 123这样的类型，就会使用 int的存储方式进行存储，在redisObject的**ptr属性**中就会保存该值。
 
 ![84880f95ccff808c1e172aa4f1718013.png](https://img-blog.csdnimg.cn/img_convert/84880f95ccff808c1e172aa4f1718013.png)
 
 #### SDS
 
-假如存储的**[字符串是一个字符串值并且长度大于32个字节]**就会使用SDS(simple dynamic string)方式进行存储，并且encoding设置为raw；若是**[字符串长度小于等于32个字节]**就会将encoding改为embstr来保存字符串。
+假如存储的**字符串是一个字符串值并且长度大于32个字节**就会使用SDS(simple dynamic string)方式进行存储，并且encoding设置为raw；若是**字符串长度小于等于32个字节**就会将encoding改为embstr来保存字符串。
 
 ![1650938b53726c698463efc2a2d21414.png](https://img-blog.csdnimg.cn/img_convert/1650938b53726c698463efc2a2d21414.png)
+
+
 
 ### 参考文章
 
@@ -94,3 +97,7 @@ Redis中规定假如存储的是 **[整数型值]**，比如set num 123这样的
 - [每日一问：Redis有几种数据结构,底层分别是怎么存储的？_星仔学习的博客-CSDN博客](https://blog.csdn.net/u012868901/article/details/122926726)
 
 - [Redis源码解析之SDS（缓存面试加分项） - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/467043930)
+
+- [Redis 速度快的原因_Powerstot的博客-CSDN博客_redis速度快的原因](https://blog.csdn.net/weixin_45813747/article/details/124973783)
+
+- [Python Django 基于 Redis做实时排行榜和排名_金国群-GIN的博客-CSDN博客_django redis热门排行榜](https://blog.csdn.net/weixin_43275654/article/details/109649161)

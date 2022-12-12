@@ -1,11 +1,12 @@
 ---
-title: celery队列
+title: Python：celery队列
 date: 2022-12-10 10:35:04
-tags: Python面试题
+tags: 
+- Python
+- MQ
+categories: Python面试题
 cover: https://images.unsplash.com/photo-1666543257223-095dcc9a12fd
 ---
-
-
 
 ## Celery简介
 
@@ -98,12 +99,6 @@ Celery 4.0 运行：
 - Python 2.6：Celery 3.1 或更早版本。
 - Python 2.5：Celery 3.0 或更早版本。
 - Python 2.4：Celery 2.2 或更早版本。
-
-
-
-
-
-
 
 ### 参考文章
 
