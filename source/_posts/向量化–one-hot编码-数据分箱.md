@@ -1,8 +1,8 @@
 ---
 title: 向量化–one-hot编码/数据分箱
 date: 2022-12-10 11:12:32
-tags: Feature Engineering
-categories: Python面试题
+tags: Python面试题
+categories: Feature Engineering
 cover: https://images.unsplash.com/photo-1666899388931-cb2a70cff398
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: MYSQL优化与多表查询
 date: 2022-12-10 13:52:12
-tags: Database
-categories: Python面试题
+tags: Python面试题
+categories: Database
 cover: https://images.unsplash.com/photo-1665512983234-5053c892365b
 ---
 

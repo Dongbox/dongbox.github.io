@@ -2,10 +2,10 @@
 title: 简述一个前端请求的处理流程，uWSGI/nginx/django之间的处理流程
 date: 2022-12-09 14:07:57
 tags: 
-- Python
+- Python面试题
 - HTTP
 - Django
-categories: Python面试题
+categories: Python
 cover: https://images.unsplash.com/photo-1666625628272-a1071f6f7173
 ---
 

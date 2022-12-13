@@ -2,9 +2,9 @@
 title: Python：celery队列
 date: 2022-12-10 10:35:04
 tags: 
-- Python
+- Python面试题
 - MQ
-categories: Python面试题
+categories: Python
 cover: https://images.unsplash.com/photo-1666543257223-095dcc9a12fd
 ---
 

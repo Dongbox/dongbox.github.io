@@ -1,8 +1,8 @@
 ---
 title: Python：进程、线程与协程
 date: 2022-12-10 10:54:10
-tags: Python
-categories: Python面试题
+tags: Python面试题
+categories: Python
 cover: https://images.unsplash.com/photo-1667423520863-8653106f18e7
 ---
 

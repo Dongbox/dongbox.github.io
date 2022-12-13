@@ -1,8 +1,8 @@
 ---
 title: Python：闭包
 date: 2022-12-10 15:50:14
-tags: Python
-categories: Python面试题
+tags: Python面试题
+categories: Python
 cover: https://images.unsplash.com/photo-1657212850528-c738d087e6f8
 ---
 

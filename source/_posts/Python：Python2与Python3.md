@@ -1,8 +1,8 @@
 ---
 title: Python：Python2与Python3
 date: 2022-12-10 21:20:33
-tags: Python
-categories: Python面试题
+tags: Python面试题
+categories: Python
 cover: https://images.unsplash.com/photo-1670258897358-1e0347859dab
 ---
 

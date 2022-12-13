@@ -1,8 +1,8 @@
 ---
 title: ModelFirst与DBFirst
 date: 2022-12-10 10:43:08
-tags: Database
-categories: Python面试题
+tags: Python面试题
+categories: Database
 cover: https://images.unsplash.com/photo-1669092160303-1e79fdff702d
 ---
 

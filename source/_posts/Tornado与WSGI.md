@@ -1,8 +1,8 @@
 ---
 title: Tornado与WSGI
 date: 2022-12-10 11:00:35
-tags: Python
-categories: Python面试题
+tags: Python面试题
+categories: Python
 cover: https://images.unsplash.com/photo-1667101011264-7b8a403c4d7b
 ---
 

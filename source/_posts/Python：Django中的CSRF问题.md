@@ -2,9 +2,9 @@
 title: Python：Django中的CSRF问题
 date: 2022-12-10 17:16:23
 tags:
-- Python
+- Python面试题
 - Django
-categories: Python面试题
+categories: Python
 cover: https://images.unsplash.com/photo-1661366050919-a14b46efee21
 ---
 

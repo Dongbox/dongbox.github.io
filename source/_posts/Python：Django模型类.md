@@ -2,9 +2,9 @@
 title: Python：Django模型类
 date: 2022-12-10 16:17:36
 tags:
-- Python
+- Python面试题
 - Django
-categories: Python面试题
+categories: Python
 cover: https://images.unsplash.com/photo-1658953229664-e8d5ebd039ba
 ---
 

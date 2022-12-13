@@ -1,8 +1,8 @@
 ---
 title: redis用过哪些数据结构？怎么保存的?
 date: 2022-12-09 20:15:37
-tags: Database
-categories: Python面试题
+tags: Python面试题
+categories: Database
 cover: https://images.unsplash.com/photo-1666126444655-23492b1532e2
 ---
 
@@ -87,8 +87,6 @@ Redis中规定假如存储的是 **[整数型值]**，比如set num 123这样的
 假如存储的**字符串是一个字符串值并且长度大于32个字节**就会使用SDS(simple dynamic string)方式进行存储，并且encoding设置为raw；若是**字符串长度小于等于32个字节**就会将encoding改为embstr来保存字符串。
 
 ![1650938b53726c698463efc2a2d21414.png](https://img-blog.csdnimg.cn/img_convert/1650938b53726c698463efc2a2d21414.png)
-
-
 
 ### 参考文章
 
