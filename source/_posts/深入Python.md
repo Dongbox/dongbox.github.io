@@ -6,7 +6,7 @@ categories: Python
 cover: https://images.unsplash.com/photo-1669192532750-5165016ad000
 ---
 
-### 魔术方法
+## 魔术方法
 
 - `__init__` 为构建好的对象赋予初始化
 
@@ -25,9 +25,7 @@ cover: https://images.unsplash.com/photo-1669192532750-5165016ad000
 
 - [python——魔术方法_影中人lx的博客-CSDN博客_python魔术方法](https://blog.csdn.net/qq_53893431/article/details/123979718)
 
-#### 
-
-#### 可迭代对象、迭代器、生成器
+## 可迭代对象、迭代器、生成器
 
 #### 可迭代对象
 
@@ -59,7 +57,7 @@ cover: https://images.unsplash.com/photo-1669192532750-5165016ad000
 
 - [迭代器和生成器详解_小白是美女的博客-CSDN博客_什么是迭代器和生成器](https://blog.csdn.net/br1999/article/details/120895476)
 
-#### 字典
+## 字典
 
 **字典的特性**：
 
@@ -75,13 +73,13 @@ cover: https://images.unsplash.com/photo-1669192532750-5165016ad000
 
 > 已知的可哈希(不可变)的数据类型: `int`, `str`, `tuple`, `bool`
 > 
-> 不可哈希(可变)的数据类型: `list`, `dict`, `set`”
+> 不可哈希(可变)的数据类型: `list`, `dict`, `set`
 
 ##### 参考文章
 
 - [python 字典 键值 数据类型_python基础数据类型--字典_Florelle的博客-CSDN博客](https://blog.csdn.net/weixin_27298377/article/details/112928689)
 
-#### 回收机制
+## 回收机制
 
 Python 的GC模块主要运用了引用计数来跟踪和回收垃圾；通过“标记-清除”解决容器对象可能产生的循环引用问题；通过分代回收以空间换时间进一步提高垃圾回收的效率。
 
@@ -94,10 +92,11 @@ Python 的GC模块主要运用了引用计数来跟踪和回收垃圾；通过�
 2. **标记-清除**
    
    “标记-清除”的出现打破了循环引用，也就是它只关注那些可能会产生循环引用的对象，Python中的循环引用总是发生在容器container对象之间，也就是能够在内部持有其他对象的对象(比如：list、dict、class等)。这也使得该方法带来的开销只依赖于容器对象的数量。
-   
-   - **原理（简约版）：**
-     
-     在python的底层，再维护一个链表，链表中专门放那些可能存在循环引用的对象(list/tuple/dict/set)。
+
+   **原理（简约版）：**
+
+   在python的底层，再维护一个链表，链表中专门放那些可能存在循环引用的对象(list/tuple/dict/set)。
+
 - **原理（详细版）：**
   
   将集合中对象的引用计数复制一份副本，用于找寻root object集合(该set中的对象是不能被回收的)。当成功找到root object集合，首先将现在的内存链表一分为二，一条链表维护root object集合，成为root链表；另外一条维护剩下的对象，成为unreachable链表。

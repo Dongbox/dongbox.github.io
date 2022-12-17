@@ -1,5 +1,5 @@
 ---
-title: redis用过哪些数据结构？怎么保存的?
+title: Python：redis，有哪些数据结构？怎么保存的?
 date: 2022-12-09 20:15:37
 tags: Python面试题
 categories: Database
@@ -88,6 +88,23 @@ Redis中规定假如存储的是 **[整数型值]**，比如set num 123这样的
 
 ![1650938b53726c698463efc2a2d21414.png](https://img-blog.csdnimg.cn/img_convert/1650938b53726c698463efc2a2d21414.png)
 
+
+
+### python设置redis连接池的好处：
+
+```python
+import redis
+# 连接池
+pool = redis.ConnectionPool(host='127.0.0.1',port=6379,password='12345')
+# 
+r = redis.Redis(connection_pool=pool)
+```
+
+通常情况下，需要连接redis时，会创建一个连接，基于这个连接进行redis操作，操作完成后去释放，正常情况下，这是没有问题的，但是并发量较高的情况下，频繁的连接创建和释放对性能会有较高的影响，于是连接池发挥作用。
+
+
+连接池的原理：‘预先创建多个连接，当进行redis操作时，直接获取已经创建好的连接进行操作。完成后，不会释放这个连接，而是让其返回连接池，用于后续redis操作！这样避免连续创建和释放，从而提高了性能！ 
+
 ### 参考文章
 
 - [redis 超详细的Redis五种数据结构详解（理论+实战） - DoubleLi - 博客园 (cnblogs.com)](https://www.cnblogs.com/lidabo/p/16673547.html)
@@ -99,3 +116,7 @@ Redis中规定假如存储的是 **[整数型值]**，比如set num 123这样的
 - [Redis 速度快的原因_Powerstot的博客-CSDN博客_redis速度快的原因](https://blog.csdn.net/weixin_45813747/article/details/124973783)
 
 - [Python Django 基于 Redis做实时排行榜和排名_金国群-GIN的博客-CSDN博客_django redis热门排行榜](https://blog.csdn.net/weixin_43275654/article/details/109649161)
+
+- [python 里的 redis 连接池的原理 - michael-chang - 博客园 (cnblogs.com)](https://www.cnblogs.com/changwenjun-666/p/11382035.html)
+
+- [python线程池ThreadPoolExecutor，实现目的：线程高可用、防止内存炸裂、线程可复用，降低因为不断的新建线程和销毁线程造成的浪费 - 乔儿 - 博客园 (cnblogs.com)](https://www.cnblogs.com/qiaoer1993/p/14268000.html)
