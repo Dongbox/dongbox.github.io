@@ -5,7 +5,7 @@
 # Site
 title: 爆炸了的bobo
 subtitle: '乱七八糟的笔法配上不太清醒的头脑'
-description: '准备开始，记录自己所有的操作吧!'
+description: '虚心学习，用心爱人~'
 keywords:
 author: Dongbox
 language: cn
@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://dongbox.space
 permalink: /post/:title.html
 permalink_defaults:
 pretty_urls:
