@@ -8,8 +8,6 @@ tags:
 cover: https://images.unsplash.com/photo-1670515258571-29149b266666
 ---
 
-
-
 ### 问题
 
 [剑指 Offer 53 - I. 在排序数组中查找数字 I - 力扣（Leetcode）](https://leetcode.cn/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/description/)
